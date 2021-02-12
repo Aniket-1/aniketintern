@@ -1,0 +1,25 @@
+<%- include("essentials/header") %>
+
+
+<h1 class="view-header"> TOTAL CUSTOMERS LIST </h1>
+
+<div class='table'>
+
+        <table  style="color:black; font-weight: 780; border:1" >
+            <tr>
+                <th style="text-align:center">From</th>
+                <th style="text-align:center">To</th>
+                <th style="text-align:center">Amount</th>
+            </tr>
+            <% for(let transaction of transactions){ %>
+                <tr>
+                    <td><%= transaction.from %></td>
+                    <td><%= transaction.to%></td>
+                    <td><%= transaction.transferAmount%></td>
+                </tr>
+            <% } %>
+        </table>
+</div>
+
+
+<%- include("essentials/footer") %>

@@ -1,0 +1,30 @@
+<%- include("./essentials/header") %>
+
+
+<div class="transfer-header">
+    <h1>Transfer to : </h1>
+</div>
+
+<div class="table">
+    <table style="color:black; font-weight: thick;">
+        <tr>
+            <th>Customer Name</th>
+            <th>Email</th>
+            <th>Balance</th>
+            <th></th>
+        </tr>
+    <% for(let current of users){ %>
+        <% if(!user._id.equals(current._id)){ %>
+            <tr>
+                <td><%= current.name %></td>
+                <td><%= current.email%></td>
+                <td><%= current.balance%></td>
+                <td><button class="transfer-btn"><a href="/viewusers/<%= user._id %>/<%= current._id %>"><strong>Transfer Money</strong></a></button></td>
+            </tr>
+        <% } %>
+    <% } %>
+    </table>
+</div>
+
+
+<%- include("./essentials/footer") %>

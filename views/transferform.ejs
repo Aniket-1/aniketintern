@@ -1,0 +1,32 @@
+<%- include("essentials/header") %>
+<table style="padding-left: 30%; width:80%">
+    <th>
+        <div class="form-body1" >
+            <h1>Transferring From : </h1>
+            <h3>Customer Name : <%= fromUser.name %></h3>
+            <h3>Balance : <%= fromUser.balance%></h3>
+        </div>
+
+        <div class="form-body2">
+            <h1>Transferring To : </h1>
+            <h3>Customer Name : <%= toUser.name %></h3>
+            <h3>Balance : <%= toUser.balance %></h3>
+        </div>
+
+        <div class="form">
+            <form action="/viewusers/<%= fromUser._id %>/<%= toUser._id %>?_method=PUT" method="POST">
+            <label for="credits"> Amount to be transferred :</label>
+            <br>
+            <input type="number" id="balance" name="balance" placeholder="" value="">
+            <br>
+            <button class="transfer2-btn" type="submit">Transfer</button>
+            </form>
+        </div>
+    </th>
+
+</table>
+
+
+
+
+<% include("essentials/footer") %>
