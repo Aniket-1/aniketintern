@@ -1,6 +1,7 @@
 {
   "name": "banking-system",
   "author": "Aniket Singh",
+  "homepage": "https://Aniket-1/aniketintern.github.io/views/index.ejs",
   "version": "1.0.0",
   "description": "Banking System App",
   "main": "app.js",
